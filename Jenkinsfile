@@ -46,11 +46,12 @@ pipeline {
                 sh 'npm install'
             }
         }
-        stage('Test') {
-            steps {
-                sh 'npm test || true' // Optional
-            }
-        }
+      stage('Test') {
+    steps {
+        sh 'npm test || echo "Tests failed, but continuing..."'
+    }
+}
+
         stage('Build & Deploy with Docker Compose') {
             steps {
                 // Stop existing containers
