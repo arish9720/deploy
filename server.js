@@ -14,7 +14,7 @@ app.use('/users', userRoutes);
 
 // Test route
 app.get('/', (req, res) => {
-  res.send('Sequelize + Express + Postgres API running....');
+  res.send('Sequelize + Express + Postgres API running');
 });
 
 // Sync DB and start server
